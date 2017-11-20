@@ -1,7 +1,7 @@
 f = input("Please enter a function: ")
-int_start = input("Please enter an interval start: ")
-int_stop = input("Please enter an interval stop: ")
-n_shapes = input("Please enter the number of shapes: ")
+int_start = int(input("Please enter an interval start: "))
+int_stop = int(input("Please enter an interval stop: "))
+n_shapes = int(input("Please enter the number of shapes: "))
 
 def f_fun(x):
     global f
@@ -12,8 +12,6 @@ def f_fun(x):
     while i < len(f):
         f_list.append(f[i])
         i += 1
-    
-    x = 3
     
     while 'x' in f_list:
         f_list[f_list.index('x')] = x
@@ -26,6 +24,10 @@ def f_fun(x):
     return eval(f)
     
 l = (int_start-int_stop)/n_shapes
+
+x_values = [int_start+l*n for n in range(n_shapes)]
+
+print(x_values)
     
 print(f_fun(3))
     
