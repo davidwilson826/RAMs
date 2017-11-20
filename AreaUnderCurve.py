@@ -23,7 +23,7 @@ def f_fun(x):
     
     return eval(f)
     
-l = (int_start-int_stop)/n_shapes
+l = (int_stop-int_start)/n_shapes
 
 x_values = [int_start+l*n for n in range(n_shapes)]
 
