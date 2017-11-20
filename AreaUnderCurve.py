@@ -16,10 +16,7 @@ def f_fun(x):
     while 'x' in f_list:
         f_list[f_list.index('x')] = x
     
-    print(f_list)
-    
     f = ''.join(str(x) for x in f_list)
-    print(f)
     
     return eval(f)
     
@@ -27,9 +24,7 @@ l = (int_stop-int_start)/n_shapes
 
 x_values = [int_start+l*n for n in range(n_shapes)]
 
-print(x_values)
-    
-print(f_fun(3))
+print(sum([f(x)*l for x in x_values]))
     
 '''    
 print(f_list)
